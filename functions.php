@@ -64,4 +64,4 @@ class LibrarySite extends Timber\Site {
 
 }
 
-new LibarySite();
+new LibrarySite();
