@@ -39,12 +39,26 @@ class LibrarySite extends Timber\Site {
 
 	public function my_acf_init() {
 
-		// check function exists
-		if ( function_exists( 'acf_register_block' ) ) {
+	// check function exists
+	if ( function_exists( 'acf_register_block' ) ) {
 
-			// register ACF blocks here
-		}
+		// register blocks here
+
+		// libraries search widget block
+		acf_register_block(
+			array(
+				'name'            => 'libraries-search',
+				'title'           => 'Libraries Search',
+				'description'     => 'A custom block for searching libraries.',
+				'render_template' => '/src/twig/components/libraries-search/libraries-search.twig',
+				'category'        => 'embdeds',
+				'icon'            => file_get_contents( get_template_directory() . '/src/images/svg/c.svg' ),
+				'mode'            => 'edit',
+				'keywords'        => array( 'library', 'search' ),
+			)
+		);
 	}
+}
 }
 
 new LibrarySite();

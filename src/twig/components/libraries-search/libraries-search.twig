@@ -1,0 +1,19 @@
+{% set searchTabs = [
+    {'id': 'LibrarySearch', 'name': 'LibrarySearch'},
+    {'id': 'Journals & Newspapers', 'name': 'Journals & Newspapers'},
+    {'id': 'Databases', 'name': 'Databases'},
+    {'id': 'Research Guides', 'name': 'Research Guides'},
+    {'id': 'Special Collections & Archives', 'name': 'Special Collections & Archives'}
+] %}
+
+<div class="tabbable tabs-left" id="librarySearch">
+  <section class="nav-section">
+    <ul class="nav nav-tabs">
+    {% for tab in searchTabs %}
+      <li>
+      test
+      </li>
+    {% endfor %}
+    </ul>
+  </section>
+</div>
