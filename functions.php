@@ -28,7 +28,6 @@ if ( ! class_exists( 'Timber' ) ) {
 	return;
 }
 
-
 class LibrarySite extends Timber\Site {
 
 	public function __construct() {
