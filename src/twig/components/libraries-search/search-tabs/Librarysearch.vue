@@ -67,7 +67,7 @@
                 />
             </div>
         </form>
-        <div class="mb-2">
+        <div v-show="searchSelection !== 'worldcat'" class="mb-2">
             <a
                 href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&mode=advanced"
                 class="text-12 uppercase text-linkBlue"
