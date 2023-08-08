@@ -8,6 +8,7 @@ const childConfig = {
             ...parentConfig.theme.colors,
             lightGray: '#e4e8f0',
             colbyBlue: '#002878',
+            linkBlue: '#0039bd',
         },
         fontSize: {
             8: '0.5rem',

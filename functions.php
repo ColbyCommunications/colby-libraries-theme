@@ -56,6 +56,18 @@ class LibrarySite extends Timber\Site {
 				'keywords'        => array( 'library', 'search' ),
 			)
 		);
+		acf_register_block(
+			array(
+				'name'            => 'libraries-search-banner',
+				'title'           => 'Libraries Search Banner',
+				'description'     => 'A custom banner block for searching libraries.',
+				'render_callback' => 'my_acf_block_render_callback',
+				'category'        => 'layout',
+				'icon'            => file_get_contents( get_template_directory() . '/src/images/svg/c.svg' ),
+				'mode'            => 'edit',
+				'keywords'        => array( 'library', 'search', 'banner' ),
+			)
+		);
 	}
 }
 }

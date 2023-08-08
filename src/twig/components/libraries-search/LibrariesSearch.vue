@@ -1,11 +1,11 @@
 <template>
     <div
-        class="tabbable tabs-left mb-6 p-0 flex flex-col sm:flex-row justify-center"
+        class="tabbable tabs-left pt-6 pl-6 mb-6 p-0 flex flex-col sm:flex-row justify-center"
         id="librarysearch"
     >
         <section class="nav-section sm:h-[300px]">
             <ul
-                class="nav nav-tabs m-0 w-full flex flex-row justify-between sm:flex-col sm:justify-start relative list-none bg-white"
+                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none bg-white"
             >
                 <li
                     v-for="tab in searchTabs"
@@ -17,18 +17,21 @@
                     <button
                         @click="handleTabChange(tab.id)"
                         class="px-2 sm:px-2 w-full h-full flex justify-start items-center text-center sm:text-start text-10 sm:text-14"
-                        :class="{ 'hover:bg-lightGray': selectedTab !== tab.id }"
+                        :class="{
+                            'hover:bg-lightGray hover:border-r-2 hover:border-gray-200':
+                                selectedTab !== tab.id,
+                        }"
                     >
                         {{ tab.name }}
                     </button>
                 </li>
             </ul>
         </section>
-        <section class="content-section sm:w-[500px] relative bg-lightGray">
-            <div class="h-[250px] w-full">
-                <component :is="selectedComponent" />
+        <section class="content-section sm:w-[600px] relative bg-lightGray">
+            <div class="pt-2 pr-4 pl-10 h-[250px] w-full">
+                <component :is="selectedComponent" @update:modelValue="handleSearchUpdate" />
             </div>
-            <LibrariesFooter />
+            <LibrariesFooter :selected-tab="selectedTab" :search-selection="searchSelection" />
         </section>
     </div>
 </template>
@@ -43,6 +46,7 @@
     import SpecialCollectionsAndArchives from './search-tabs/SpecialCollectionsAndArchives.vue';
 
     const selectedTab = ref('librarysearch');
+    const searchSelection = ref('librarysearch');
 
     const searchTabs = [
         { id: 'librarysearch', name: 'LibrarySearch' },
@@ -54,6 +58,10 @@
 
     const handleTabChange = (tabID) => {
         selectedTab.value = tabID;
+    };
+
+    const handleSearchUpdate = (newValue) => {
+        searchSelection.value = newValue;
     };
 
     // Computed property to dynamically select the component based on the selected tab
