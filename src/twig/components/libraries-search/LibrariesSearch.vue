@@ -1,11 +1,11 @@
 <template>
     <div
-        class="tabbable tabs-left pt-6 pl-6 mb-6 p-0 flex flex-col sm:flex-row justify-center"
+        class="tabbable tabs-left pt-6 pl-6 mb-6 p-0 pb-6 flex flex-col sm:flex-row justify-center bg-hero__pattern"
         id="librarysearch"
     >
         <section class="nav-section sm:h-[300px]">
             <ul
-                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none bg-white"
+                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none"
             >
                 <li
                     v-for="tab in searchTabs"
