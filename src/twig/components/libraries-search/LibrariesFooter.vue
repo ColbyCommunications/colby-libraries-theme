@@ -1,6 +1,17 @@
 <template>
-    <ul class="px-4 h-[50px] flex justify-between items-center bg-colbyBlue text-white">
-        <li v-for="link in filteredLinks" :key="link.id">
+    <ul
+        class="py-[5px] md:py-0 px-4 h-auto md:h-[50px] bg-colbyBlue text-white grid grid-cols-2"
+        :class="
+            props.selectedTab === 'librarysearch' || props.selectedTab === 'journals-and-newspapers'
+                ? 'md:grid md:grid-cols-4'
+                : 'md:grid md:grid-cols-3'
+        "
+    >
+        <li
+            v-for="link in filteredLinks"
+            :key="link.id"
+            class="py-[5px] md:py-0 pr-2 flex justify-start items-center"
+        >
             <a :href="link.url" class="flex items-center"
                 ><img :src="link.imgPath" :alt="link.text" class="mr-2 w-[30px] h-[30px]" />
                 <p class="text-10 uppercase">{{ link.text }}</p>

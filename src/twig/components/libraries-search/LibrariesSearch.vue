@@ -18,7 +18,7 @@
                         @click="handleTabChange(tab.id)"
                         class="px-2 sm:px-2 w-full h-full flex justify-start items-center text-center sm:text-start text-10 sm:text-14"
                         :class="{
-                            'hover:bg-lightGray hover:border-r-2 hover:border-gray-200':
+                            'hover:bg-lightGray sm:hover:border-r-2 sm:hover:border-gray-200':
                                 selectedTab !== tab.id,
                         }"
                     >
