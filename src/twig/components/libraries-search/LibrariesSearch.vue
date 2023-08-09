@@ -1,6 +1,6 @@
 <template>
     <div
-        class="tabbable tabs-left pt-6 pl-6 mb-6 p-0 pb-6 flex flex-col sm:flex-row justify-center bg-hero__pattern"
+        class="tabbable tabs-left pt-6 pl-6 md:mb-0 mb-6 p-0 pb-6 flex flex-col sm:flex-row justify-center bg-hero__pattern"
         id="librarysearch"
     >
         <section class="nav-section sm:h-[300px]">
