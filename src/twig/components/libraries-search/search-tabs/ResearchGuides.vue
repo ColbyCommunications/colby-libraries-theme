@@ -20,7 +20,7 @@
             </div>
         </form>
         <section>
-            <div class="text-12">
+            <div class="text-12 sm:text-[11px] md:text-12">
                 <p class="mb-2">
                     Research guides are curated collections of library resources and helpful
                     information created by our subject specialists.

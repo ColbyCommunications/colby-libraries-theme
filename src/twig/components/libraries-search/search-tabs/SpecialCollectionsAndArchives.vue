@@ -1,7 +1,7 @@
 <template>
     <div>
-        <form class="mb-2">
-            <div class="sc-btn-container text-12">
+        <form class="mb-[3px]">
+            <div class="sc-btn-container text-12 sm:text-[11px] md:text-12">
                 <input
                     id="physical-collections-btn"
                     type="radio"
@@ -9,7 +9,7 @@
                     name="special-collections"
                     checked="checked"
                     autocomplete="off"
-                    class="mr-2"
+                    class="mr-2 hover:cursor-pointer"
                     v-model="collectionSelection"
                 />
                 <label for="physical-collections-btn" class="mr-4">Physical Collections</label>
@@ -19,14 +19,14 @@
                     value="digital"
                     name="special-collections"
                     autocomplete="off"
-                    class="mr-2"
+                    class="mr-2 hover:cursor-pointer"
                     v-model="collectionSelection"
                 />
                 <label for="digital-collections-btn">Digital Collections</label>
             </div>
         </form>
         <section v-show="collectionSelection === 'physical'">
-            <div class="text-12">
+            <div class="text-12 sm:text-[11px] md:text-12">
                 <p class="mb-2">
                     Discover Colby’s <strong>physical</strong> Special Collections & Archives
                     collections which include both culturally significant materials and Colby
@@ -49,7 +49,7 @@
             </div>
         </section>
         <section v-show="collectionSelection === 'digital'">
-            <div class="text-12">
+            <div class="text-12 sm:text-[11px] md:text-12">
                 <p class="mb-2">
                     Explore Colby’s <strong>digital</strong> Special Collections & Archives
                     collections which include both culturally significant materials and Colby

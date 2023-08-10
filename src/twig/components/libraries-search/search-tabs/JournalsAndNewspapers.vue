@@ -28,7 +28,7 @@
                 />
             </div>
         </form>
-        <section class="text-12">
+        <section class="text-12 sm:text-[11px] md:text-12">
             <div>
                 <p>
                     Locate and access Colby's academic journal and newspaper holdings. Use

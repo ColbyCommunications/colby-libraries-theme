@@ -19,7 +19,7 @@
             </div>
         </form>
         <section>
-            <div class="text-12">
+            <div class="text-12 sm:text-[11px] md:text-12">
                 <p>
                     Browse our
                     <a class="text-linkBlue no-underline" href="https://libguides.colby.edu/az.php"

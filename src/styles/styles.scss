@@ -417,6 +417,7 @@ form .search-box {
             position: absolute;
             top: 40%;
             left: 80%;
+            pointer-events: none;
         }
 
         select {
@@ -432,6 +433,10 @@ form .search-box {
             -moz-appearance: none;
             -webkit-appearance: none;
         }
+    }
+
+    .drop-down:hover {
+        cursor: pointer;
     }
 
     input[type='image'] {

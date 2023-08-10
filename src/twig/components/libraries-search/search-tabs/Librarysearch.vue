@@ -70,18 +70,18 @@
         <div v-show="searchSelection !== 'worldcat'" class="mb-2">
             <a
                 href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&mode=advanced"
-                class="text-12 uppercase text-linkBlue"
+                class="text-12 sm:text-[11px] md:text-12 uppercase text-linkBlue"
                 >advanced search</a
             >
         </div>
-        <div class="mb-2 flex text-12">
+        <div class="mb-2 flex text-12 sm:text-[11px] md:text-12">
             <input
                 type="radio"
                 value="librarysearch"
                 id="librarysearch-btn"
                 checked="checked"
                 autocomplete="off"
-                class="mr-2"
+                class="mr-2 hover:cursor-pointer"
                 v-model="searchSelection"
                 @change="$emit('update:modelValue', $event.target.value)"
             />
@@ -91,7 +91,7 @@
                 value="mainecat"
                 id="mainecat-btn"
                 autocomplete="off"
-                class="mr-2"
+                class="mr-2 hover:cursor-pointer"
                 v-model="searchSelection"
                 @change="$emit('update:modelValue', $event.target.value)"
             />
@@ -101,13 +101,16 @@
                 value="worldcat"
                 id="worldcat-btn"
                 autocomplete="off"
-                class="mr-2"
+                class="mr-2 hover:cursor-pointer"
                 v-model="searchSelection"
                 @change="$emit('update:modelValue', $event.target.value)"
             />
             <label for="worldcat-btn">WorldCat</label>
         </div>
-        <section v-show="searchSelection === 'librarysearch'" class="text-12">
+        <section
+            v-show="searchSelection === 'librarysearch'"
+            class="text-12 sm:text-[11px] md:text-12"
+        >
             <p class="mb-2">
                 Use
                 <a
@@ -127,7 +130,7 @@
             </p>
             <p class="text-center"><i>Not finding what you need?</i> Try MaineCat, or WorldCat.</p>
         </section>
-        <section v-show="searchSelection === 'mainecat'" class="text-12">
+        <section v-show="searchSelection === 'mainecat'" class="text-12 sm:text-[11px] md:text-12">
             <p>
                 <strong>MaineCat:</strong> Discover items from the public and academic libraries
                 across Maine. Use
@@ -137,7 +140,7 @@
                 to request items from MaineCat.
             </p>
         </section>
-        <section v-show="searchSelection === 'worldcat'" class="text-12">
+        <section v-show="searchSelection === 'worldcat'" class="text-12 sm:text-[11px] md:text-12">
             <p class="mb-2">
                 <strong>WorldCat:</strong> Explore and request items from academic libraries
                 worldwide.

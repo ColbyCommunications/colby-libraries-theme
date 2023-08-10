@@ -1,11 +1,11 @@
 <template>
     <div
-        class="tabbable tabs-left pt-6 pl-6 mb-6 p-0 pb-6 flex flex-col sm:flex-row justify-center bg-hero__pattern"
+        class="tabbable tabs-left pt-6 mb-6 p-0 pb-6 flex flex-col sm:flex-row justify-center bg-hero__pattern"
         id="librarysearch"
     >
         <section class="nav-section sm:h-[300px]">
             <ul
-                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none"
+                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none bg-white sm:bg-transparent"
             >
                 <li
                     v-for="tab in searchTabs"
@@ -16,7 +16,7 @@
                 >
                     <button
                         @click="handleTabChange(tab.id)"
-                        class="px-2 sm:px-2 w-full h-full flex justify-start items-center text-center sm:text-start text-10 sm:text-14"
+                        class="px-2 sm:px-2 w-full h-full flex justify-start items-center text-center sm:text-start text-10 sm:text-12"
                         :class="{
                             'hover:bg-lightGray sm:hover:border-r-2 sm:hover:border-gray-200':
                                 selectedTab !== tab.id,
@@ -27,8 +27,8 @@
                 </li>
             </ul>
         </section>
-        <section class="content-section sm:w-[600px] relative bg-lightGray">
-            <div class="pt-2 pr-4 pl-10 h-[250px] w-full">
+        <section class="content-section w-auto sm:w-[600px] relative bg-lightGray">
+            <div class="pt-2 pr-4 pl-10 h-[300px] sm:h-[250px] w-full">
                 <component :is="selectedComponent" @update:modelValue="handleSearchUpdate" />
             </div>
             <LibrariesFooter :selected-tab="selectedTab" :search-selection="searchSelection" />
