@@ -1,4 +1,5 @@
 const parentConfig = require('../colby-college-theme/tailwind.config');
+const path = require('path');
 
 const childConfig = {
     content: ['./src/**/*.{twig,vue}', '../colby-college-theme/src/**/*.{twig,vue}'],
@@ -32,6 +33,10 @@ const childConfig = {
             lg: '1024px',
             xl: '1280px',
             '2xl': '1536px',
+        },
+        backgroundImage: {
+            ...parentConfig.theme.backgroundImage,
+            fdlp_logo: `url("${path.dirname(__filename)}/src/images/fdlp_logo.png")`,
         },
     },
     plugins: [...parentConfig.plugins],
