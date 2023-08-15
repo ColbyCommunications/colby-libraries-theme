@@ -12,7 +12,7 @@
             <div v-show="collectionSelection === 'physical'" class="search-box">
                 <input
                     type="text"
-                    placeholder="Find a journal or newspaper by title or ISSN"
+                    placeholder="Search for physical materials in our special collections and archives"
                     class="summon-search-field search-bar-full"
                     autocomplete="off"
                     v-model="scQuery"
