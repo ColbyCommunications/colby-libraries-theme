@@ -420,18 +420,21 @@ form .search-box {
             pointer-events: none;
         }
 
-        select {
-            height: 100%;
-            width: 135px !important;
-            box-shadow: none;
-            border: 0;
-            font-size: 13px;
-            color: #232b3b;
-            font-size: 12.5px;
-            border-radius: 0;
-            appearance: none;
-            -moz-appearance: none;
-            -webkit-appearance: none;
+        div {
+            width: 130px;
+            select {
+                height: 100%;
+                width: 100px;
+                box-shadow: none;
+                border: 0;
+                font-size: 13px;
+                color: #232b3b;
+                font-size: 12.5px;
+                border-radius: 0;
+                appearance: none;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+            }
         }
     }
 

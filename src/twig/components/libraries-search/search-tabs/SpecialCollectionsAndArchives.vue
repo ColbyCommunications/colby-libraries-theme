@@ -1,6 +1,27 @@
 <template>
     <div>
-        <form class="mb-[3px]">
+        <form
+            class="mb-[3px]"
+            id="sc-search"
+            name="scSearchForm"
+            action="https://librarysearch.colby.edu/discovery/search"
+            accept-charset="utf-8"
+            method="GET"
+            @submit.prevent="handleSCSearch"
+        >
+            <div v-show="collectionSelection === 'physical'" class="search-box">
+                <input
+                    type="text"
+                    placeholder="Find a journal or newspaper by title or ISSN"
+                    class="summon-search-field search-bar-full"
+                    autocomplete="off"
+                    v-model="scQuery"
+                />
+                <input type="hidden" name="query" :value="'any,contains,' + scQuery" />
+                <input type="hidden" name="vid" value="01CBB_CCLIBRAR:COLBY" />
+                <input type="hidden" name="search_scope" value="SCA" />
+                <input type="image" @click.prevent="handleSCSearch" :src="search" alt="search" />
+            </div>
             <div class="sc-btn-container text-12 sm:text-[11px] md:text-12">
                 <input
                     id="physical-collections-btn"
@@ -94,8 +115,16 @@
 </template>
 <script setup>
     import { ref } from 'vue';
+    import search from '../img/search.svg';
 
     // set the default selection to physical collections
     const collectionSelection = ref('physical');
+
+    const scQuery = ref(null);
+
+    const handleSCSearch = () => {
+        // Submit the form
+        document.scSearchForm.submit();
+    };
 </script>
 <style scoped></style>

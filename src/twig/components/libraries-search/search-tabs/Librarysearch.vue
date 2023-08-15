@@ -11,7 +11,7 @@
             <div class="search-box">
                 <input
                     type="text"
-                    placeholder="Find articles, books, and more."
+                    :placeholder="placeholderText"
                     class="summon-search-field search-bar"
                     autocomplete="off"
                     v-model="query"
@@ -20,12 +20,19 @@
                 <input type="hidden" name="tab" value="Library" />
                 <input type="hidden" name="vid" value="01CBB_CCLIBRAR:COLBY" />
                 <div class="drop-down">
-                    <select name="search_scope" class="outline-offset-8">
-                        <option value="DN_and_CI">Everything</option>
-                        <option value="CentralIndex">Articles</option>
-                        <option value="MyInstitution">Books and More</option>
-                        <option value="CourseReserves">Course Reserves</option>
-                    </select>
+                    <div>
+                        <select
+                            v-model="selectedSearchScope"
+                            name="search_scope"
+                            class="outline-offset-8"
+                        >
+                            <option value="DN_and_CI">Everything</option>
+                            <option value="CentralIndex">Articles</option>
+                            <option value="DiscoveryNetwork">Books and More</option>
+                            <option value="CourseReserves">Course Reserves</option>
+                            <option value="SCA">Special Collections & Archives</option>
+                        </select>
+                    </div>
                 </div>
                 <input
                     type="image"
@@ -175,7 +182,7 @@
     </div>
 </template>
 <script setup>
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, computed } from 'vue';
     import search from '../img/search.svg';
 
     defineProps(['modelValue']);
@@ -185,6 +192,22 @@
     const searchSelection = ref('librarysearch');
     const query = ref(null);
     const searcharg = ref(null);
+
+    const selectedSearchScope = ref('DN_and_CI');
+
+    const placeholderText = computed(() => {
+        if (selectedSearchScope.value === 'DN_and_CI') {
+            return 'Find articles, books, and more.';
+        } else if (selectedSearchScope.value === 'CentralIndex') {
+            return "Colby's articles & book chapters.";
+        } else if (selectedSearchScope.value === 'DiscoveryNetwork') {
+            return "Colby's books & media.";
+        } else if (selectedSearchScope.value === 'CourseReserves') {
+            return 'Locate course reserves.';
+        } else {
+            return 'Placeholder text for other options.';
+        }
+    });
 
     onMounted(() => {
         // Emit the initial value
