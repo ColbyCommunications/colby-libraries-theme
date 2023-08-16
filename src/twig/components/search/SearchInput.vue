@@ -2,7 +2,7 @@
     <div class="flex justify-between flex-col md:flex-row">
         <h1
             class="font-extended font-normal text-24 leading-110 -tracking-3 text-indigo mb-5 md:mb-0"
-            v-text="'Search'"
+            v-text="'Search the Libraries\' Website'"
         />
         <form
             action=""
