@@ -40,7 +40,7 @@
             >
                 Use
                 <a
-                    href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&mode=advanced"
+                    href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&lang=en"
                     target="_blank"
                     >LibrarySearch</a
                 >
