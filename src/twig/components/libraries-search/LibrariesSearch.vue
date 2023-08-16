@@ -1,24 +1,24 @@
 <template>
     <div
-        class="tabbable tabs-left pt-6 p-0 pb-6 flex flex-col sm:flex-row justify-center"
+        class="tabbable tabs-left pt-6 p-0 pb-6 flex flex-col md:flex-row justify-center"
         id="librarysearch"
     >
-        <section class="nav-section sm:h-[300px]">
+        <section class="nav-section md:h-[300px]">
             <ul
-                class="nav nav-tabs m-0 w-full sm:w-36 flex flex-row justify-between sm:flex-col sm:justify-start relative list-none bg-white sm:bg-transparent"
+                class="nav nav-tabs m-0 w-full md:w-36 flex flex-row justify-between md:flex-col md:justify-start relative list-none bg-white md:bg-transparent"
             >
                 <li
                     v-for="tab in searchTabs"
                     :key="tab.id"
                     :id="tab.id"
-                    class="h-[50px] sm:w-full border-l border-r border-lightGray sm:border-0"
+                    class="h-[50px] md:w-full border-l border-r border-lightGray md:border-0"
                     :class="{ 'tab relative text-colbyBlue': true, active: selectedTab === tab.id }"
                 >
                     <button
                         @click="handleTabChange(tab.id)"
-                        class="px-2 sm:px-2 w-full h-full flex justify-start items-center text-center sm:text-start text-10 sm:text-12"
+                        class="px-2 md:px-2 w-full h-full flex justify-start items-center text-center md:text-start text-10 md:text-12"
                         :class="{
-                            'hover:bg-lightGray sm:hover:border-r-2 sm:hover:border-gray-200':
+                            'hover:bg-lightGray md:hover:border-r-2 md:hover:border-gray-200':
                                 selectedTab !== tab.id,
                         }"
                     >
@@ -27,8 +27,8 @@
                 </li>
             </ul>
         </section>
-        <section class="content-section w-auto sm:w-[600px] relative bg-lightGray">
-            <div class="pt-2 pr-4 pl-10 h-[300px] sm:h-[250px] w-full">
+        <section class="content-section w-auto md:w-[600px] relative bg-lightGray">
+            <div class="pt-6 lg:pt-2 pr-4 pl-10 h-[300px] md:h-[250px] w-full">
                 <component :is="selectedComponent" @update:modelValue="handleSearchUpdate" />
             </div>
             <LibrariesFooter :selected-tab="selectedTab" :search-selection="searchSelection" />
@@ -90,7 +90,7 @@
         color: white;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 767px) {
         .active:after {
             content: ' ';
             width: 0;
@@ -106,7 +106,7 @@
         }
     }
 
-    @media (min-width: 480px) {
+    @media (min-width: 768px) {
         .active:after {
             margin-right: -25px;
             content: ' ';
