@@ -1,0 +1,79 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+{% if post.type.name == 'post' %}
+  {% set template_subheading = post.date|date("M d, Y") %}
+  {% set template_heading = post.title %}
+  {% set template_paragraph = fn('has_excerpt') ? fn('get_the_excerpt') : null %}
+  {% set template_date_bool = true %}
+  {% set display_sidebar = false %}
+{% else %}
+  {% set template_subheading = post.title %}
+  {% set display_sidebar = post.meta('display_sidebar') %}
+  {% set template_heading = post.meta('heading') %}
+  {% set template_paragraph = post.meta('paragraph') %}
+{% endif %}
+
+{% if post.meta('hero_type') == 'none' %}
+
+{% elseif post.meta('hero_type') == 'half_width' %}
+  {% include 'hw-image-section.twig' with {
+    hero: true,
+    reverse: true,
+    size: 'large',
+    subheading: template_subheading,
+    heading: template_heading,
+    paragraph: template_paragraph,
+    image: post.meta('image'),
+    buttons: post.meta('buttons')
+  } %}
+{% elseif post.meta('hero_type') == 'overlay' %}
+  {% include 'overlay-hero.twig' with {
+    size: 'medium',
+    subheading: template_subheading,
+    heading: template_heading,
+    paragraph: template_paragraph,
+    image: post.meta('image'),
+    buttons: post.meta('buttons')
+  } %}
+{% else %}
+  {% include 'hero.twig' with {
+    image_orientation: post.meta('image_orientation'),
+    date: template_date_bool,
+    subheading: template_subheading,
+    heading: template_heading,
+    paragraph: template_paragraph,
+    align: post.meta('align'),
+    image: post.meta('image'),
+    buttons: post.meta('buttons')
+  } %}
+{% endif %}
+
+<section class="sidebar-page">
+  <div class="sidebar-page__inner md:grid md:grid-cols-12 gap-x-10 max-w-screen-2xl w-full px-5 my-0 mx-auto md:mt-20 mt-16">
+    {% if display_sidebar %}
+      <div class="sidebar-page__secondary md:col-span-3 xl:col-span-2 mb-16 md:mb-0
+        [&>div+div]:mt-7"
+      >
+        {% include 'subpage-nav.twig' with {
+          heading: alpha_parent.title,
+          items: alpha_parent.children,
+          menu_obj: alpha_parent.menu,
+          parent_permalink: alpha_parent.permalink
+        } %}
+        {% for widget in post.meta('widgets') %}
+          {% include 'widget.twig' with widget %}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="sidebar-page__main {% if display_sidebar %}xl:col-start-4 md:col-span-9{% else %}md:col-span-12{% endif %}">
+      {% include 'wysiwyg.twig' with {
+            post: {
+              content: post.content,
+            },
+      } %}
+    </div>
+  </div>
+</section>
+{% endblock %}
