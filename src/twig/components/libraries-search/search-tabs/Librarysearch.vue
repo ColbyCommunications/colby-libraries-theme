@@ -27,7 +27,7 @@
                             class="outline-offset-8"
                         >
                             <option value="DN_and_CI">Everything</option>
-                            <option value="CentralIndex">Articles</option>
+                            <option value="CentralIndex">Articles and More</option>
                             <option value="DiscoveryNetwork">Books and More</option>
                             <option value="CourseReserves">Course Reserves</option>
                             <option value="SCA">Special Collections & Archives</option>
@@ -199,13 +199,13 @@
         if (selectedSearchScope.value === 'DN_and_CI') {
             return 'Find articles, books, and more.';
         } else if (selectedSearchScope.value === 'CentralIndex') {
-            return "Colby's articles & book chapters.";
+            return 'Citations and full-text articles, ebook chapters, and more';
         } else if (selectedSearchScope.value === 'DiscoveryNetwork') {
-            return "Colby's books & media.";
+            return 'CBB books, media, and more';
         } else if (selectedSearchScope.value === 'CourseReserves') {
-            return 'Locate course reserves.';
+            return 'Course materials selected by faculty';
         } else {
-            return 'Placeholder text for other options.';
+            return 'Physical materials in our Special Collections and Archives';
         }
     });
 
