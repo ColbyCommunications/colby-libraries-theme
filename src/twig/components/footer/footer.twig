@@ -49,7 +49,7 @@
           <ul class="footer__socials flex space-x-4 ">
             {% for item in social %}
               <li class="text-[0]">
-                <a class="flex text-indigo-100" href="{{ item.platform.url }}">
+                <a class="flex text-indigo-100" href="{{ item.platform.url }}" target="_blank">
                   {{ icons.icon(item.platform.title|lower, 'fill-indigo-100 hover:fill-indigo-500 max-w-6 max-h-6 w-full transition-all duration-200 ease-in-out') }}
                   <span class="sr-only">{{ item.platform.title }}</span>
                 </a>
