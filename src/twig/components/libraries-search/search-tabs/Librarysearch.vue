@@ -141,7 +141,7 @@
             <!--<p>
                 <strong>MaineCat:</strong> Discover items from the public and academic libraries
                 across Maine. Use
-                <a class="text-linkBlue no-underline" href="https://libraries.colby.edu/ill/"
+                <a class="text-linkBlue no-underline" href="https://libraries.colby.edu/borrow-renew-request/ill/"
                     >Interlibrary Loan</a
                 >
                 to request items from MaineCat.
@@ -149,7 +149,7 @@
             <p>
                 MaineCat borrowing is currently unavailable and will resume during the fall
                 semester. Until then, please use
-                <a href="https://libraries.colby.edu/interlibrary-loan/">interlibrary loan</a> to
+                <a href="https://libraries.colby.edu/borrow-renew-request/ill/">interlibrary loan</a> to
                 request materials
             </p>
         </section>
@@ -163,7 +163,7 @@
                     <p>
                         <a
                             class="text-linkBlue no-underline"
-                            href="https://firstsearch.oclc.org/WebZ/FSPrefs?entityjsdetect=:javascript=true:screensize=large:sessionid=fsap04pxm1-1680-ll2afa00-5edvr3:entitypagenum=1:0"
+                            href="https://firstsearch.oclc.org/WebZ/FSPrefs?entityjsdetect=:javascript=true:screensize=large:sessionid=fsap04pxm1-1680-llmgz910-w3ewcu:entitypagenum=1:0"
                             >FirstSearch</a
                         >: focused searches and automated
                         <a
