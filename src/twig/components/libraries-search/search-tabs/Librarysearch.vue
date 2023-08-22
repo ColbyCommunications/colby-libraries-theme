@@ -42,7 +42,7 @@
                 />
             </div>
         </form>
-        <form
+        <!--<form
             v-if="searchSelection === 'mainecat'"
             name="maineCatForm"
             method="GET"
@@ -73,7 +73,7 @@
                     alt="search"
                 />
             </div>
-        </form>
+        </form>-->
         <div v-show="searchSelection !== 'worldcat'" class="mb-2">
             <a
                 href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&mode=advanced"
@@ -138,13 +138,19 @@
             <p class="text-center"><i>Not finding what you need?</i> Try MaineCat, or WorldCat.</p>
         </section>
         <section v-show="searchSelection === 'mainecat'" class="text-12 sm:text-[11px] md:text-12">
-            <p>
+            <!--<p>
                 <strong>MaineCat:</strong> Discover items from the public and academic libraries
                 across Maine. Use
                 <a class="text-linkBlue no-underline" href="https://libraries.colby.edu/ill/"
                     >Interlibrary Loan</a
                 >
                 to request items from MaineCat.
+            </p>-->
+            <p>
+                MaineCat borrowing is currently unavailable and will resume during the fall
+                semester. Until then, please use
+                <a href="https://libraries.colby.edu/interlibrary-loan/">interlibrary loan</a> to
+                request materials
             </p>
         </section>
         <section v-show="searchSelection === 'worldcat'" class="text-12 sm:text-[11px] md:text-12">
