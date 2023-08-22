@@ -149,8 +149,10 @@
             <p>
                 MaineCat borrowing is currently unavailable and will resume during the fall
                 semester. Until then, please use
-                <a href="https://libraries.colby.edu/borrow-renew-request/ill/">interlibrary loan</a> to
-                request materials
+                <a href="https://libraries.colby.edu/borrow-renew-request/ill/"
+                    >interlibrary loan</a
+                >
+                to request materials
             </p>
         </section>
         <section v-show="searchSelection === 'worldcat'" class="text-12 sm:text-[11px] md:text-12">
@@ -168,7 +170,7 @@
                         >: focused searches and automated
                         <a
                             class="text-linkBlue no-underline"
-                            href="https://libraries.colby.edu/ill/"
+                            href="https://libraries.colby.edu/borrow-renew-request/ill/"
                             >Interlibrary Loan</a
                         >
                         requests.
