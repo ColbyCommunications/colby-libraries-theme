@@ -165,7 +165,7 @@
                     <p>
                         <a
                             class="text-linkBlue no-underline"
-                            href="https://firstsearch.oclc.org/WebZ/FSPrefs?entityjsdetect=:javascript=true:screensize=large:sessionid=fsap04pxm1-1680-llmgz910-w3ewcu:entitypagenum=1:0"
+                            href="https://colby.idm.oclc.org/login?url=https://firstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP"
                             >FirstSearch</a
                         >: focused searches and automated
                         <a
