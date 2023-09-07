@@ -47,7 +47,7 @@
                             Find and contact a
                             <a
                                 class="text-linkBlue no-underline"
-                                href="https://libraries.colby.edu/research-help/subjectspecialists/"
+                                href="https://libraries.colby.edu/research-support/library-liaisons/"
                                 >library liaison</a
                             >
                             in your subject area
