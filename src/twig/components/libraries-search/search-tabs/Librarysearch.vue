@@ -20,7 +20,7 @@
                 <input type="hidden" name="tab" value="Library" />
                 <input type="hidden" name="vid" value="01CBB_CCLIBRAR:COLBY" />
                 <div class="drop-down">
-                    <div>
+                    <div class="flex items-center">
                         <select
                             v-model="selectedSearchScope"
                             name="search_scope"
@@ -42,7 +42,7 @@
                 />
             </div>
         </form>
-        <!--<form
+        <form
             v-if="searchSelection === 'mainecat'"
             name="maineCatForm"
             method="GET"
@@ -53,17 +53,19 @@
             <div class="search-box">
                 <input
                     type="text"
-                    placeholder="Find articles, books, and more."
+                    placeholder="Search by keyword, title, or author."
                     class="summon-search-field search-bar"
                     autocomplete="off"
                     v-model="searcharg"
                 />
                 <div class="drop-down">
-                    <select name="searchtype">
-                        <option value="X">Keyword</option>
-                        <option value="t">Title</option>
-                        <option value="a">Author (Last, First)</option>
-                    </select>
+                    <div class="flex items-center">
+                        <select name="searchtype" class="outline-offset-8">
+                            <option value="X">Keyword</option>
+                            <option value="t">Title</option>
+                            <option value="a">Author (Last, First)</option>
+                        </select>
+                    </div>
                 </div>
                 <input type="hidden" name="searcharg" :value="searcharg" />
                 <input
@@ -73,8 +75,8 @@
                     alt="search"
                 />
             </div>
-        </form>-->
-        <div v-show="searchSelection !== 'worldcat'" class="mb-2">
+        </form>
+        <div v-show="searchSelection !== 'worldcat' && searchSelection !== 'mainecat'" class="mb-2">
             <a
                 href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&mode=advanced"
                 class="text-12 sm:text-[11px] md:text-12 uppercase text-linkBlue"
@@ -138,21 +140,9 @@
             <p class="text-center"><i>Not finding what you need?</i> Try MaineCat, or WorldCat.</p>
         </section>
         <section v-show="searchSelection === 'mainecat'" class="text-12 sm:text-[11px] md:text-12">
-            <!--<p>
-                <strong>MaineCat:</strong> Discover items from the public and academic libraries
-                across Maine. Use
-                <a class="text-linkBlue no-underline" href="https://libraries.colby.edu/borrow-renew-request/ill/"
-                    >Interlibrary Loan</a
-                >
-                to request items from MaineCat.
-            </p>-->
             <p>
-                MaineCat borrowing is currently unavailable and will resume during the fall
-                semester. Until then, please use
-                <a href="https://libraries.colby.edu/borrow-renew-request/ill/"
-                    >interlibrary loan</a
-                >
-                to request materials
+                <strong>MaineCat: </strong>Use MaineCat to search for and borrow materials from
+                libraries across Maine.
             </p>
         </section>
         <section v-show="searchSelection === 'worldcat'" class="text-12 sm:text-[11px] md:text-12">

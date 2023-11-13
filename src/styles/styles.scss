@@ -423,8 +423,9 @@ form .search-box {
         div {
             width: 130px;
             select {
+                padding-right: 20px;
                 height: 100%;
-                width: 125px;
+                max-width: 125px;
                 box-shadow: none;
                 border: 0;
                 font-size: 13px;
