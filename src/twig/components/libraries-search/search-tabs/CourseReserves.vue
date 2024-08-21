@@ -32,7 +32,7 @@
                 Search by either:
             </p>
             <p class="mb-4">
-                <ul>
+                <ul class="pl-6 list-disc">
                     <li>Instructor Name</li>
                     <li>Course Code (e.g., ENG230)</li>
                     <li>Course Name</li>
