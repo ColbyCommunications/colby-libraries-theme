@@ -27,11 +27,9 @@
                 />
             </div>
         </form>
-        <section
-            class="text-12 sm:text-[11px] md:text-12"
-        >
-            <p class="mb-2">
-                <b>Search by either:</b>
+        <section class="text-12 sm:text-[11px] md:text-12">
+            <p class="mb-2 font-bold">
+                Search by either:
             </p>
             <p class="mb-4">
                 <ul>
@@ -41,7 +39,7 @@
                     <li>Title or Author</li>
                 </ul>
             </p>
-            <p>Check out the items, bring the <b>course number, item call number</b> and your <b>campus ID</b> to the Information Desk indicated in "Available at" (ex., Miller or Bixler).</p>
+            <p>Check out the items, bring the <span class="font-bold">course number, item call number</span> and your <<span class="font-bold">>campus ID</span> to the Information Desk indicated in "Available at" (ex., Miller or Bixler).</p>
         </section>
     </div>
 </template>
