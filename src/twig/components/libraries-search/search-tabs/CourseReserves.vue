@@ -28,18 +28,21 @@
             </div>
         </form>
         <section class="text-12 sm:text-[11px] md:text-12">
-            <p class="mb-2 font-bold">
-                Search by either:
-            </p>
-            <p class="mb-4">
+            <p class="mb-2 font-bold">Search by either:</p>
+            <div class="mb-4">
                 <ul class="pl-6 list-disc">
                     <li>Instructor Name</li>
                     <li>Course Code (e.g., ENG230)</li>
                     <li>Course Name</li>
                     <li>Title or Author</li>
                 </ul>
+            </div>
+            <p>
+                Check out the items, bring the
+                <span class="font-bold">course number, item call number</span> and your
+                <span class="font-bold">>campus ID</span>
+                to the Information Desk indicated in "Available at" (ex., Miller or Bixler).
             </p>
-            <p>Check out the items, bring the <span class="font-bold">course number, item call number</span> and your <<span class="font-bold">>campus ID</span> to the Information Desk indicated in "Available at" (ex., Miller or Bixler).</p>
         </section>
     </div>
 </template>
