@@ -85,7 +85,7 @@
         {
             id: 7,
             tab: 'course-reserves',
-            url: 'https://libguides.colby.edu/librarysearch',
+            url: 'https://libguides.colby.edu/reserves',
             imgPath: moreInfo,
             text: 'more info',
         },

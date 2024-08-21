@@ -27,6 +27,22 @@
                 />
             </div>
         </form>
+        <section
+            class="text-12 sm:text-[11px] md:text-12"
+        >
+            <p class="mb-2">
+                <b>Search by either:</b>
+            </p>
+            <p class="mb-4">
+                <ul>
+                    <li>Instructor Name</li>
+                    <li>Course Code (e.g., ENG230)</li>
+                    <li>Course Name</li>
+                    <li>Title or Author</li>
+                </ul>
+            </p>
+            <p>Check out the items, bring the <b>course number, item call number</b> and your <b>campus ID</b> to the Information Desk indicated in "Available at" (ex., Miller or Bixler).</p>
+        </section>
     </div>
 </template>
 <script setup>
@@ -41,7 +57,7 @@
     const query = ref(null);
 
     const placeholderText = computed(() => {
-        return 'Course materials selected by faculty';
+        return 'Find course materials available for short-term loan';
     });
 
     onMounted(() => {
