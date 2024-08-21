@@ -28,7 +28,7 @@
             </ul>
         </section>
         <section class="content-section w-auto md:w-[600px] relative bg-lightGray">
-            <div class="pt-6 lg:pt-2 pr-4 pl-10 h-[300px] md:h-[250px] w-full">
+            <div class="pt-6 lg:pt-2 pr-4 pl-10 h-[300px] w-full">
                 <component :is="selectedComponent" @update:modelValue="handleSearchUpdate" />
             </div>
             <LibrariesFooter :selected-tab="selectedTab" :search-selection="searchSelection" />
@@ -43,6 +43,7 @@
     import JournalsAndNewspapers from './search-tabs/JournalsAndNewspapers.vue';
     import Databases from './search-tabs/Databases.vue';
     import ResearchGuides from './search-tabs/ResearchGuides.vue';
+    import CourseReserves from './search-tabs/CourseReserves.vue';
     import SpecialCollectionsAndArchives from './search-tabs/SpecialCollectionsAndArchives.vue';
 
     const selectedTab = ref('librarysearch');
@@ -53,6 +54,7 @@
         { id: 'journals-and-newspapers', name: 'Journals & Newspapers' },
         { id: 'databases', name: 'Databases' },
         { id: 'research-guides', name: 'Research Guides' },
+        { id: 'course-reserves', name: 'Course Reserves' },
         { id: 'special-collections-and-archives', name: 'Special Collections & Archives' },
     ];
 
@@ -75,6 +77,8 @@
                 return Databases;
             case 'research-guides':
                 return ResearchGuides;
+            case 'course-reserves':
+                return CourseReserves;
             case 'special-collections-and-archives':
                 return SpecialCollectionsAndArchives;
             default:
