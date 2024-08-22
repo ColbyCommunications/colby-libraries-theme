@@ -38,7 +38,7 @@
                 </ul>
             </div>
             <p>
-                Check out the items, bring the
+                To check out items, bring the
                 <span class="font-bold">course number, item call number</span> and your
                 <span class="font-bold">campus ID</span>
                 to the Information Desk indicated in "Available at" (ex., Miller or Bixler).
