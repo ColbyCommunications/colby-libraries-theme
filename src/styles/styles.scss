@@ -8,7 +8,9 @@
 @use 'tailwindcss/base';
 @use 'tailwindcss/components';
 @use 'tailwindcss/utilities';
-@use 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+// @use 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@use 'global/variables';
+@use 'global/layout';
 
 @use '../../../colby-college-theme/src/styles/styles.scss';
 
