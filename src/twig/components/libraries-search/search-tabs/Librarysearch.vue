@@ -17,7 +17,7 @@
                     v-model="query"
                 />
                 <input type="hidden" name="query" :value="'any,contains,' + query" />
-                <input type="hidden" name="tab" value="Library" />
+                <input type="hidden" name="tab" :value="tabValue" />
                 <input type="hidden" name="vid" value="01CBB_CCLIBRAR:COLBY" />
                 <div class="drop-down">
                     <div class="flex items-center">
@@ -204,6 +204,23 @@
             return 'Course materials selected by faculty';
         } else {
             return 'Physical materials in our Special Collections and Archives';
+        }
+    });
+
+    const tabValue = computed(() => {
+        switch (selectedSearchScope.value) {
+            case 'DN_and_CI':
+                return 'Everything';
+            case 'CentralIndex':
+                return 'Articles%20and%20More';
+            case 'DiscoveryNetwork':
+                return 'LibraryCatalog';
+            case 'CourseReserves':
+                return 'CourseReserves';
+            case 'SCA':
+                return 'SCA';
+            default:
+                return 'Everything';
         }
     });
 
