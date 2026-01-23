@@ -26,11 +26,11 @@
                             name="search_scope"
                             class="outline-offset-8"
                         >
-                            <option value="DN_and_CI">Everything</option>
-                            <option value="CentralIndex">Articles and More</option>
+                            <option value="NZ_Everything_Expanded">Everything</option>
                             <option value="DiscoveryNetwork">Books and More</option>
                             <option value="CourseReserves">Course Reserves</option>
                             <option value="SCA">Special Collections & Archives</option>
+                            <option value="NZ_Everything_NotExpanded">Classic</option>
                         </select>
                     </div>
                 </div>
@@ -191,17 +191,17 @@
     const query = ref(null);
     const searcharg = ref(null);
 
-    const selectedSearchScope = ref('DN_and_CI');
+    const selectedSearchScope = ref('NZ_Everything_Expanded');
 
     const placeholderText = computed(() => {
-        if (selectedSearchScope.value === 'DN_and_CI') {
+        if (selectedSearchScope.value === 'NZ_Everything_Expanded') {
             return 'Find articles, books, and more.';
-        } else if (selectedSearchScope.value === 'CentralIndex') {
-            return 'Citations and full-text articles, ebook chapters, and more';
         } else if (selectedSearchScope.value === 'DiscoveryNetwork') {
             return 'CBB books, media, and more';
         } else if (selectedSearchScope.value === 'CourseReserves') {
             return 'Course materials selected by faculty';
+        } else if (selectedSearchScope.value === 'NZ_Everything_NotExpanded') {
+            return 'Find articles, books, and more.';
         } else {
             return 'Physical materials in our Special Collections and Archives';
         }
@@ -209,16 +209,16 @@
 
     const tabValue = computed(() => {
         switch (selectedSearchScope.value) {
-            case 'DN_and_CI':
-                return 'Everything';
-            case 'CentralIndex':
-                return 'Articles%20and%20More';
+            case 'NZ_Everything_Expanded':
+                return 'NZ_Everything_Expanded';
             case 'DiscoveryNetwork':
                 return 'LibraryCatalog';
             case 'CourseReserves':
                 return 'CourseReserves';
             case 'SCA':
                 return 'SCA';
+            case 'NZ_Everything_NotExpanded':
+                return 'NZ_Everything_NotExpanded';
             default:
                 return 'Everything';
         }
