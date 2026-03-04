@@ -30,13 +30,13 @@
                         <p>
                             Browse guides by
                             <a
-                                class="text-linkBlue no-underline"
+                                class="text-linkBlue no-underline hover:underline focus:underline"
                                 href="https://libguides.colby.edu/"
                                 >subject</a
                             >
                             or
                             <a
-                                class="text-linkBlue no-underline"
+                                class="text-linkBlue no-underline hover:underline focus:underline"
                                 href="https://libguides.colby.edu/course_guides"
                                 >course</a
                             >
@@ -46,7 +46,7 @@
                         <p>
                             Find and contact a
                             <a
-                                class="text-linkBlue no-underline"
+                                class="text-linkBlue no-underline hover:underline focus:underline"
                                 href="https://libraries.colby.edu/research-support/library-liaisons/"
                                 >library liaison</a
                             >

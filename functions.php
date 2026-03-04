@@ -6,6 +6,8 @@ if ( file_exists( $composer_autoload ) ) {
 	Timber\Timber::init();
 }
 
+ include __DIR__ . '/acf_fields.php';
+
 /**
  * This ensures that Timber is loaded and available as a PHP class.
  * If not, it gives an error message to help direct developers on where to activate
@@ -31,6 +33,7 @@ if ( ! class_exists( 'Timber' ) ) {
 class LibrarySite extends Timber\Site {
 
 	public function __construct() {
+		add_action( 'after_setup_theme', array( $this, 'theme_supports' ) );
 		add_action( 'acf/init', array( $this, 'my_acf_init' ) );
 		parent::__construct();
 	}
@@ -70,6 +73,19 @@ class LibrarySite extends Timber\Site {
 		);
 	}
 }
+
+public function theme_supports() {
+		if ( function_exists( 'acf_add_options_page' ) ) {
+			acf_add_options_page(
+				array(
+					'page_title' => 'Global Settings',
+					'menu_title' => 'Global Settings',
+					'menu_slug'  => 'global-settings',
+					'redirect'   => false,
+				)
+			);
+		}
+	}
 }
 
 new LibrarySite();

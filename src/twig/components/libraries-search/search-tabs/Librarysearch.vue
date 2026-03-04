@@ -21,7 +21,9 @@
                 <input type="hidden" name="vid" value="01CBB_CCLIBRAR:COLBY" />
                 <div class="drop-down">
                     <div class="flex items-center">
+                        <label for="search_scope" class="sr-only"> Search scope </label>
                         <select
+                            id="search_scope"
                             v-model="selectedSearchScope"
                             name="search_scope"
                             class="outline-offset-8"
@@ -123,7 +125,7 @@
             <p class="mb-2">
                 Use
                 <a
-                    class="text-linkBlue no-underline"
+                    class="text-linkBlue no-underline hover:underline focus:underline"
                     href="https://librarysearch.colby.edu/discovery/search?vid=01CBB_CCLIBRAR:COLBY&lang=en"
                     >LibrarySearch</a
                 >
@@ -131,7 +133,7 @@
             </p>
             <p class="mb-4">
                 <a
-                    class="text-linkBlue no-underline"
+                    class="text-linkBlue no-underline hover:underline focus:underline"
                     href="https://libguides.colby.edu/librarysearch/about/"
                     >Explore</a
                 >
@@ -154,12 +156,12 @@
                 <li>
                     <p>
                         <a
-                            class="text-linkBlue no-underline"
+                            class="text-linkBlue no-underline hover:underline focus:underline"
                             href="https://colby.idm.oclc.org/login?url=https://firstsearch.oclc.org/dbname=WorldCat;done=referer;FSIP"
                             >FirstSearch</a
                         >: focused searches and automated
                         <a
-                            class="text-linkBlue no-underline"
+                            class="text-linkBlue no-underline hover:underline focus:underline"
                             href="https://libraries.colby.edu/borrow-renew-request/ill/"
                             >Interlibrary Loan</a
                         >
@@ -169,7 +171,9 @@
                 <li>
                     <p>
                         Use
-                        <a class="text-linkBlue no-underline" href="https://www.worldcat.org/"
+                        <a
+                            class="text-linkBlue no-underline hover:underline focus:underline"
+                            href="https://www.worldcat.org/"
                             >WorldCat.org</a
                         >
                         for the most intuitive browsing experience.

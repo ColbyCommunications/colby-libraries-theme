@@ -33,7 +33,7 @@
                 <p>
                     Locate and access Colby's academic journal and newspaper holdings. Use
                     <a
-                        class="text-linkBlue no-underline"
+                        class="text-linkBlue no-underline hover:underline focus:underline"
                         href="https://librarysearch.colby.edu/discovery/npsearch?vid=01CBB_CCLIBRAR:COLBY"
                         >Search Newspapers</a
                     >
@@ -45,7 +45,7 @@
                     New York Times, Wall Street Journal, and Morning Sentinel to current students,
                     faculty, and staff?
                     <a
-                        class="text-linkBlue no-underline"
+                        class="text-linkBlue no-underline hover:underline focus:underline"
                         href="https://libguides.colby.edu/newspapers-at-colby/setup"
                         >Register here for yours!</a
                     >

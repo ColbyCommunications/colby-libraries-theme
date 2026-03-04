@@ -22,14 +22,20 @@
             <div class="text-12 sm:text-[11px] md:text-12">
                 <p>
                     Browse our
-                    <a class="text-linkBlue no-underline" href="https://libguides.colby.edu/az.php"
+                    <a
+                        class="text-linkBlue no-underline hover:underline focus:underline"
+                        href="https://libguides.colby.edu/az.php"
                         >databases by title or subject</a
                     >, use
-                    <a class="text-linkBlue no-underline" href="https://libguides.colby.edu/az.php"
+                    <a
+                        class="text-linkBlue no-underline hover:underline focus:underline"
+                        href="https://libguides.colby.edu/az.php"
                         >popular databases</a
                     >
                     to jump start your research, or explore our
-                    <a class="text-linkBlue no-underline" href="https://libguides.colby.edu/az.php"
+                    <a
+                        class="text-linkBlue no-underline hover:underline focus:underline"
+                        href="https://libguides.colby.edu/az.php"
                         >trial databases</a
                     >.
                 </p>

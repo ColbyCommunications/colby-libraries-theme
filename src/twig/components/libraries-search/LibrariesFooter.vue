@@ -14,7 +14,7 @@
         >
             <a :href="link.url" class="flex items-center"
                 ><img :src="link.imgPath" :alt="link.text" class="mr-2 w-[30px] h-[30px]" />
-                <p class="text-10 uppercase">{{ link.text }}</p>
+                <p class="text-10 capitalize">{{ link.text }}</p>
             </a>
         </li>
     </ul>

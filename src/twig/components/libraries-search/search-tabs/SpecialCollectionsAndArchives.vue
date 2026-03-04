@@ -121,7 +121,7 @@
                         <p>
                             Use
                             <a
-                                class="text-linkBlue no-underline"
+                                class="text-linkBlue no-underline hover:underline focus:underline"
                                 href="https://archivesspace.colby.edu/"
                                 >ArchivesSpace</a
                             >
